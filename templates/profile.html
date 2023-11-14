@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Poppins:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Roboto&display=swap" rel="stylesheet">
+    <script src="/static/javascript/script.js"></script> 
+</head>
+<body>
+    <div class="imgee">
+        <!-- nav bar  -->
+        <div class="nav">
+            <ul>
+                <a href="{{url_for('home')}}">
+                    <li>Home</li>
+                </a>
+                <a href="">
+                    <li>My Orders</li>
+                </a>
+                <a href="{{url_for('profile')}}">
+                    <li>Profile</li>
+                </a>
+            </ul>
+        </div>
+        <div class="doo">
+            <h1 style="font-size: 70px;">DOOFEE</h1>
+            <p style="font-size: 40px;">Discover the best food & drinks</p>
+        </div>
+    </div>
+
+    <div class="profile">
+        <div class="pdetail">
+            <p>Name : Ajay Kumar</p>
+            <p>Email : ajayjeyapal@gmail.com</p>
+            <p>Phone : 9003746160</p>
+
+        </div>
+        <div class="feedback">
+            <form action="">
+                <p>Feedback</p>
+                <textarea name="" id="" cols="100" rows="6">Describe your feedback</textarea>
+                <button class="submit" type="submit">Submit</button>
+            </form>
+            
+        </div>
+
+    </div>
+</body>
+</html>

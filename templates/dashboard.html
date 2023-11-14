@@ -4,23 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Poppins:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Roboto&display=swap" rel="stylesheet">
+    <script src="/static/javascript/script.js"></script> 
 </head>
+
+<style>
+
+    
+    
+</style>
 <body>
     <div class="imgee">
         <!-- nav bar  -->
         <div class="nav">
             <ul>
-                <li>Top Dishes</li>
-                <li>Profile</li>
-                <li>About</li>
+                <a href="">
+                    <li>Home</li>
+                </a>
+                <a href="">
+                    <li>My Orders</li>
+                </a>
+                <a href="{{url_for('profile')}}">
+                    <li>Profile</li>
+                </a>
             </ul>
         </div>
         <div class="doo">
             <h1 style="font-size: 70px;">DOOFEE</h1>
-            <p style="font-size: 40px;">Discover the best food & drinks in Salem</p>
+            <p style="font-size: 40px;">Discover the best food & drinks</p>
         </div>
     </div>
+
+    <div class="menu">
+        <table class="table">
+            <tr>
+                <th style="width: 100px;">No.</th>
+                <th style="width: 500px;">Dishes</th>
+                <th style="width: 200px;">Count</th>
+                <th style="width: 200px;">price</th>
+            </tr>
+
+                                <!-- briyani Order detail -->
+            <tr>
+                <td style="font-size: 30px; text-align:center;">1</td>
+                <td>
+                    <div class="mm">
+                        <img src="/static/images/biriyani.avif" class="dis" alt=""> <h2 class="name">Chicken Biriyani 150/-</h2>
+                    </div>
+                </td>
+                <td>
+                    <div class="count">
+                        <button class="minus" onclick="biriyaniminus()"><span class="min" >-</span></button>
+                        <p class="demo" id="biriyani" >0</p>
+                        <button class="plus" onclick="biriyaniadd()"><span  class="min">+</span></button>
+
+
+                    </div>
+                </td>
+                <td style="font-size: 30px; text-align:center;"> <span id="biriyaniprice">0</span> Rs</td>
+            </tr>
+                                <!-- pizza Order detail -->
+            <tr>
+                <td style="font-size: 30px; text-align:center;">2</td>
+                <td>
+                    <div class="mm">
+                        <img src="/static/images/pizza.avif" class="dis" alt=""> <h2 class="name">Pizza 200/-</h2>
+                    </div>
+                </td>
+                <td>
+                    <div class="count">
+                        <button class="minus" onclick="pizzaminus()"><span class="min">-</span></button>
+                        <p class="demo" id="pizza" >0</p>
+                        <button class="plus" onclick="pizzaadd()"><span class="min">+</span></button>
+
+
+                    </div>
+                </td>
+                <td style="font-size: 30px; text-align:center;"> <span id="pizzaprice">0</span> Rs</td>
+            </tr>
+
+                                <!-- shawarma Order details -->
+            <tr>
+                <td style="font-size: 30px; text-align:center;">2</td>
+                <td>
+                    <div class="mm">
+                        <img src="/static/images/shawarma.avif" class="dis" alt=""> <h2 class="name">Shawarma 90/-</h2>
+                    </div>
+                </td>
+                <td>
+                    <div class="count">
+                        <button class="minus" onclick="shawarmaminus()"><span class="min">-</span></button>
+                        <p class="demo" id="shawarma" >0</p>
+                        <button class="plus" onclick="shawarmaadd()"><span class="min">+</span></button>
+
+
+                    </div>
+                </td>
+                <td style="font-size: 30px; text-align:center;"> <span id="shawarmaprice">0</span> Rs</td>
+            </tr>
+                             <!-- friedrice order details -->
+            <tr>
+                <td style="font-size: 30px; text-align:center;">2</td>
+                <td>
+                    <div class="mm">
+                        <img src="/static/images/friedrice.avif" class="dis" alt=""> <h2 class="name">Friedrice 120/-</h2>
+                    </div>
+                </td>
+                <td>
+                    <div class="count">
+                        <button class="minus" onclick="friedriceminus()"><span class="min">-</span></button>
+                        <p class="demo" id="friedrice" >0</p>
+                        <button class="plus" onclick="friedriceadd()"><span class="min">+</span></button>
+
+
+                    </div>
+                </td>
+                <td style="font-size: 30px; text-align:center;"> <span id="friedriceprice">0</span> Rs</td>
+            </tr>
+
+                            <!-- total price section -->
+            <tr>
+                
+                <td colspan="3" ><h2 style="display: flex; justify-content:flex-end " class="name">Total Price</h2></td>
+                <td style="font-size: 30px; text-align:center;"> <span id="totalprice">0</span> Rs</td>
+            </tr>
+        </table>
+        <div style="width: 80%;">
+            <button class="place" onclick="placeorder()">Place Order</button>
+        </div>
+    </div>
+
+    <div class="message">
+        <img src="/static/images/close.svg" class="close" id="close" alt="">
+        <div class="mssg">
+            <p id="msg"></p>
+
+        </div>
+        
+    </div>
+
     
+  
 </body>
 </html>

@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.imgee{
+    background-image: url(/static/images/zom.avif);
+    width: 100%;
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.nav{
+    border: 0px solid red;
+    top: 20px;
+    position: absolute;
+    right: 100px;
+    width: 400px;
+
+}
+.nav>ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    list-style-type: none;
+    color: white;
+    gap: 50px;
+    font-size: 25px;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.doo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    color: white;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%,-50%);
+}
+
+.menu{
+    position: relative;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.table {
+    
+    border: 1px solid black;
+    padding: 10px;
+    border-collapse:collapse;
+    width: 80%;
+    
+
+    
+}
+
+
+
+.table th{
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 25px;
+
+}
+
+.table td{
+    border: 1px solid black;
+    padding: 10px;
+
+}
+
+.dis{
+    width: 150px;
+    border: 0px solid red;
+    border-radius: 50%;
+}
+.name{
+    font-size: 40px;
+}
+.min{
+    font-size: 30px;
+    color: aliceblue;
+    
+}
+
+.mm{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.minus{
+    width: 50px;
+    padding: 5px;
+    background-color: red;
+    border: 1px solid black;
+    cursor: pointer;
+
+}
+
+.plus{
+    background-color: green;
+    border: 1px solid black;
+    width: 50px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.count{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+.demo{
+    font-size: 30px;
+    margin-top: 7px;
+}
+
+.place{
+    width: 100%;
+    background-color: green;
+    padding: 10px;
+    border: 0px;
+    margin-bottom: 200px;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.message{
+    display: none;
+    border: 0px solid black;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow:5px 5px 10px  black;
+    background-color: rgb(192, 255, 192);
+    
+    
+}
+
+.close{
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.mssg{
+    border: 0px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    padding-left:10px ;
+    padding-right: 10px;
+    text-align: center;
+    
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    border: 0px solid red;
+    gap: 70px;
+    margin-top: 50px;
+}
+
+.pdetail{
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+    margin-top: -30px;
+}
+
+.feedback>form{
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.feedback>form>textarea{
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.submit{
+    width: 100px;
+    background-color: green;
+    padding: 10px;
+    border: 0px;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
