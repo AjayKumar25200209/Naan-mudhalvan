@@ -169,6 +169,11 @@ function placeorder() {
                 document.getElementById("msg").innerHTML="Please try again later after some time"
             }
         })
+        .catch(error=>{
+            document.querySelector(".message").style.display="block";
+            document.getElementById("msg").innerHTML=error;
+
+        })
         
 
     }
@@ -181,6 +186,15 @@ document.addEventListener("DOMContentLoaded",function(){
     document.getElementById("close").addEventListener("click", function(){
         document.querySelector(".message").style.display="none";
         document.getElementById("msg").innerHTML=""
+        biriyani=document.getElementById("biriyani").innerHTML="0"
+        pizza=document.getElementById("pizza").innerHTML="0"
+        friedrice=document.getElementById("friedrice").innerHTML="0"
+        shawarma=document.getElementById("shawarma").innerHTML="0"
+        biriyaniprice=document.getElementById("biriyaniprice").innerHTML="0"
+        pizzaprice=document.getElementById("pizzaprice").innerHTML="0"
+        friedriceprice=document.getElementById("friedriceprice").innerHTML="0"
+        shawarmaprice=document.getElementById("shawarmaprice").innerHTML="0"
+        document.getElementById("totalprice").innerHTML="0"
     
     })
 

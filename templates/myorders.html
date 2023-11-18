@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="shortcut icon" href="/static/images/images.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Poppins:wght@300;400&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&family=Roboto&display=swap" rel="stylesheet">
+    <script src="/static/javascript/script.js"></script> 
+
+</head>
+
+<style>
+    table{
+        border: 1px solid black;
+        width: 90%;
+        border-collapse: collapse;
+    }
+
+    th{
+        border: 1px solid black; 
+        padding: 10px;
+        background-color: rgb(207, 248, 248);
+    }
+
+    td{
+        border: 1px solid black;
+        padding: 10px;
+        background-color: rgb(190, 255, 190);
+    }
+</style>
+<body>
+    
+    
+        <div class="nav">
+            <ul>
+                <a href="{{url_for('home')}}">
+                    <li style="color: black;">Home</li>
+                </a>
+                <a href="{{url_for('myorders')}}">
+                    <li style="color: black;" >My Orders</li>
+                </a>
+                <a href="{{url_for('profile')}}">
+                    <li style="color: black;">Profile</li>
+                </a>
+                <a href="{{url_for('logout')}}">
+                    <li style="color: black;">Logout</li>
+                </a>
+            </ul>
+        </div>
+        {% if orders %}
+
+            <div class="order">
+                <h2>List of Your Orders</h2>
+                <table>
+
+                    <tr>
+                        <th>Order Id</th>
+                        <th>Order Date</th>
+                        <th>No of Chickenbiriyani</th>
+                        <th>No of Pizza</th>
+                        <th>No of Shawarma</th>
+                        <th>No of Friedrice</th>
+                        <th>Total Price</th>
+                    </tr>
+                
+                {% for x in orders %}
+                    <div class="or">
+                        <tr>
+                            <td><p >{{x['ono']}} </p></td>
+                            <td><p> {{x['date']}}</p></td>
+                            {%  if x['chickenbiriyani'] != "0" %}
+                                <td>
+                                    <p>{{x['chickenbiriyani']}} ({{x['cbp']}} Rs)</p>
+                                </td>
+                            {% else  %}
+                                <td>
+                                    <p> No </p>
+                                </td>
+                            {% endif %}
+                            
+                            {%  if x['pizza'] !="0" %}
+                                <td><p> {{x['pizza']}} ({{x['pp']}} Rs)</p></td>
+                            
+                            {% else  %}
+                                <td>
+                                    <p> No </p>
+                                </td>
+                            {% endif %}
+                            
+                            {%  if x['shawarma'] !="0" %}
+                                <td><p> {{x['shawarma']}} ({{x['sp']}} Rs)</p></td>
+                            {% else  %}
+                                <td>
+                                    <p> No </p>
+                                </td>
+                            {% endif %}
+
+                            {%  if x['friedrice'] !="0" %}
+                                <td><p> {{x['friedrice']}} ({{x['fp']}} Rs)</p></td>
+                            {% else  %}
+                                <td>
+                                    <p> No </p>
+                                </td>
+                            {% endif %}
+
+                            <td><p> {{x['total']}} Rs </p></td>
+                        </tr>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    {% endfor %}
+                </table>
+        
+            </div>
+        {% else %}
+            <p class="center"> No Orders</p>
+        {% endif %}
+        {% if  Error %}
+            <P class="center"> {{Error}} </P>
+        {% endif %}
+
+        
+    
+    
+</body>
+</html>

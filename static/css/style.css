@@ -20,7 +20,7 @@
     top: 20px;
     position: absolute;
     right: 100px;
-    width: 400px;
+    width: 500px;
 
 }
 .nav>ul{
@@ -196,8 +196,9 @@
     display: flex;
     justify-content: center;
     align-items:center;
+    flex-direction: column;
     border: 0px solid red;
-    gap: 70px;
+    gap: 40px;
     margin-top: 50px;
 }
 
@@ -205,7 +206,7 @@
     font-family: 'DM Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
-    font-size: 25px;
+    font-size: 35px;
     margin-top: -30px;
 }
 
@@ -226,7 +227,7 @@
 }
 
 .submit{
-    width: 100px;
+    width: 100%;
     background-color: green;
     padding: 10px;
     border: 0px;
@@ -236,4 +237,38 @@
     font-family: 'DM Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     font-family: 'Roboto', sans-serif;
+}
+
+.order{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%);
+    border: 0px solid red;
+    width: 100%;
+    gap: 2px;
+}
+
+.or{
+    border: 0px solid red;
+    display: flex;
+    gap: 30px;
+    font-size: 17px;
+    font-family: 'DM Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 20px;
+    transform: translate(-50%,-50%);
+
 }

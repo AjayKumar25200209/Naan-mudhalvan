@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="shortcut icon" href="/static/images/images.png" type="image/x-icon">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,11 +22,14 @@
                 <a href="{{url_for('home')}}">
                     <li>Home</li>
                 </a>
-                <a href="">
+                <a href="{{url_for('myorders')}}">
                     <li>My Orders</li>
                 </a>
                 <a href="{{url_for('profile')}}">
                     <li>Profile</li>
+                </a>
+                <a href="{{url_for('logout')}}">
+                    <li>Logout</li>
                 </a>
             </ul>
         </div>
@@ -36,10 +40,12 @@
     </div>
 
     <div class="profile">
+        
         <div class="pdetail">
-            <p>Name : Ajay Kumar</p>
-            <p>Email : ajayjeyapal@gmail.com</p>
-            <p>Phone : 9003746160</p>
+            <p>Name : {{result['uname']}}</p>
+            <p>Email : {{result['uemail']}} </p>
+            <p>Phone : {{result['unumber']}}</p>
+            <p>Address : {{result['uaddress']}}</p>
 
         </div>
         <div class="feedback">
